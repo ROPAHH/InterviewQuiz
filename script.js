@@ -244,8 +244,20 @@ totalQuestionsElement.textContent = questions.length;
             resultBox.style.display = 'block';
             scoreElement.textContent = score;
         }
-    });
+    
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
 
+    // Shuffle the questions array
+    shuffleArray(questions);
+
+    // Your existing code here...
+});
     function showQuestion() {
         const question = questions[questionCount];
         questionText.textContent = question.question;
