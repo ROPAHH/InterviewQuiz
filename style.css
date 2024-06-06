@@ -38,11 +38,7 @@ body{
     
 }
 
-.start_btn button:hover{
-    color: white;
-    background: #CB565F;
-    border-color: #CB565F;
-}
+
 
 .info_box{
     display: none;
@@ -106,22 +102,14 @@ font-size: 17px;
 
 }
 
-.buttons button.restart:hover{
-    background-color:  red;
-    border-color:  red;
 
-}
 
 .buttons button.quit{
     border-color: grey;
     color: black;
 
 }
-.buttons button.quit:hover{
-    background-color:  red;
-    border-color:  red;
-    color: white;
-}
+
 
 .quiz_box{
     display: none;
@@ -212,10 +200,7 @@ section .option_list .option{
 
 
 
-section .option_list .option:hover{
-    color: rgb(189, 105, 119);
-    background-color: rgb(70, 17, 33);
-}
+
 
 .option_list .option:last-child{
     margin-bottom: 0px;
@@ -285,10 +270,7 @@ footer .next_btn{
     transition: all 0.3s ease;
 }
 
-footer .next_btn:hover{
-    background: #86242c;
-    border: 1px solid #86242c;
-}
+
 
 .result_box{
     
@@ -374,11 +356,7 @@ footer .next_btn:hover{
 
 }
 
-.buttons button.restart:hover{
-    background-color:  red;
-    border-color:  red;
 
-}
 
 .buttons button.quit{
     
@@ -390,10 +368,7 @@ footer .next_btn:hover{
     font-weight: 400px;
 
 }
-.buttons button.quit:hover{
-    background-color:  red;
-    border-color:  red;
-}
+
 
 
 .activeInfo {
@@ -401,9 +376,7 @@ footer .next_btn:hover{
 }
 
 
-.option:hover {
-    background-color: #f1f1f1;
-}
+
 
 
 .option.correct .icon.tick,
@@ -417,8 +390,9 @@ footer .next_btn:hover{
 }
 
 .option.correct {
-    background-color: #0b670e; /* Green for correct */
-    color:  rgb(44, 181, 44);
+    background-color:  rgb(44, 181, 44);
+ /* Green for correct */
+    color: olivedrab;
 }
 
 .option.wrong {
@@ -426,3 +400,36 @@ footer .next_btn:hover{
     color: rgb(41, 5, 250);
 }
 
+/* Your existing CSS */
+
+/* Replace hover effects with :active pseudo-class */
+.option:active {
+    background-color: #f1f1f1; /* Adjust touch feedback */
+}
+
+/* Adjust layout for smaller screens */
+@media only screen and (max-width: 600px) {
+    .quiz_box,
+    .info_box,
+    .result_box {
+        width: 90%; /* Adjust width */
+    }
+    .quiz_box section .que_text {
+        font-size: 20px; /* Adjust font size */
+    }
+    .option_list .option {
+        font-size: 15px; /* Adjust font size */
+    }
+}
+
+/* Ensure text fits well on different screen sizes */
+@media only screen and (max-width: 400px) {
+    .quiz_box section .que_text {
+        font-size: 18px; /* Further adjust font size */
+    }
+}
+
+/* Improve touch feedback */
+.option:active {
+    transform: translateY(2px); /* Simulate button press */
+}
