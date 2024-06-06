@@ -109,9 +109,9 @@ font-size: 17px;
 
 
 .buttons button.quit{
-    border-color: grey;
-    color: black;
-
+    
+    background:  #CB565F;
+    border: 1px solid #CB565F;
 }
 
 
@@ -247,6 +247,7 @@ section .option_list .option{
     display: flex;
     user-select: none;
     color: white;
+    
 }
 
 footer .total_que span p{
@@ -260,18 +261,20 @@ footer .total_que span p:first-child{
 
 
 footer .next_btn{
-    height: 40px;
-    padding: 0 13px;
-    font-size: 18px;
-    font-weight: 400px;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 19px;
+    font-weight: 600px;
     border: none;
     outline: none;
     color: white;
     background: #CB565F;
-    border: 1px solid #CB565F;
+    border: 1px solid #d74450;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    
+    
 }
 
 
@@ -279,7 +282,7 @@ footer .next_btn{
 .result_box{
     
     background-color: white;
-    width: 450px;
+    padding: 20px;
     padding: 25px 30px;
     border-radius: 5px;
     display: none;
@@ -287,7 +290,11 @@ footer .next_btn{
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
-    transform: translate(-50%, -50%) scale(0.9)
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0 0 10px rgb(0,0,0,0.1);
+    max-width: 450px;
+    width: 90%;
+    border-radius: 5px;
 
 }
 
@@ -396,7 +403,7 @@ footer .next_btn{
 .option.correct {
     background-color:  rgb(44, 181, 44);
  /* Green for correct */
-    color: olivedrab;
+    color: olive;
 }
 
 .option.wrong {
